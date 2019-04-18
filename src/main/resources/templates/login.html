@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default}">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body class="d-flex flex-column bg-white " style="min-height: 100vh;">
+    <div layout:fragment="content" class="container-fluid flex-fill">
+        <div class="row h-100" style="margin-top: 10%;">
+            <div class="col-md-4 mx-auto">
+                <h1 style="color:#78ab46">Login page</h1>
+                <form th:action="@{/login}" method="post">
+
+                    <div class="form-group">
+                        <label for="username">Username</label>:
+                        <input type="text"
+                               id="username"
+                               name="username"
+                               class="form-control"
+                               autofocus="autofocus"
+                               placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>:
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               class="form-control"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <input type="submit"
+                                       name="login-submit"
+                                       id="login-submit"
+                                       class="form-control btn btn-info"
+                                       value="Log In">
+                            </div>
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <input type="button"
+                                       name="register"
+                                       id="register"
+                                       class="form-control btn btn-success"
+                                       value="Register">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

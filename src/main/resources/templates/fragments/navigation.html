@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div th:fragment="navigation">
+			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<img th:src="@{/image/E.SUN_Bank.svg.png}" width="30" >
+			  	<a style="margin-left:10px;" class="navbar-brand" href="/">e指揪團</a>
+			  		
+			  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    			<span class="navbar-toggler-icon"></span>
+		  			</button>
+		  		<div class="collapse navbar-collapse" id="navbarText">
+		    		<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link" href="/activity">現有活動 <span
+								class="sr-only">(current)</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="/activity/add">揪團</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> 活動管理 </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="/activity/ilaunch">我是主揪</a>
+								<a class="dropdown-item" href="/activity/ijoin">我是團員</a>
+							</div></li>
+						<li class="nav-item">
+		        			<a class="nav-link" href="#">帳號管理</a>
+		      			</li>
+		    		</ul>
+		    		<div class="navbar-right text-white" id="headerGroup">
+		 		   		<button type="button" class="btn btn-warning" style="margin-left:10px;" id="btn_logout" onclick="/login">登入</button>
+		    		</div>
+		  		</div>
+			</nav>
+		</div>
+	</body>
+</html>

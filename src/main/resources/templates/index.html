@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/default}">
+<head>
+	<meta charset="UTF-8">
+</head>
+
+
+<body>
+	<div layout:fragment="content">
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+			</ul>
+
+			<div class="carousel-inner">
+
+				<div class="carousel-item active">
+					<img th:src="@{image/mountain.JPG}">
+				</div>
+
+				<div class="carousel-item">
+					<img th:src="@{image/image01.jpg}">
+				</div>
+
+				<div class="carousel-item">
+					<img th:src="@{image/image02.jpg}" >
+				</div>
+
+				<div class="carousel-item">
+					<img th:src="@{image/image03.jpg}" >
+				</div>
+
+			</div>
+
+			<!-- search -->
+
+			<a class="carousel-control-prev" href="#demo" data-slide="prev"> <span
+				class="carousel-control-prev-icon"></span>
+			</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+		<div class="container my-5">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-10 col-lg-8">
+					<form class="card card-sm" method="post" action="activity_list.jsp">
+						<div class="input-group-sm row no-gutters align-items-center">
+							<div class="col-auto">
+								<i class="fas fa-search ml-2"></i>
+							</div>
+							<!--end of col-->
+							<div class="col">
+								<input placeholder="請輸入活動名稱" class="border-0 form-control form-control-borderless"
+									type="search" name="activity_name">
+							</div>
+							<!--end of col-->
+							<div class="col-auto">
+								<button  class="btn btn-lg btn-success" type="submit">搜尋</button>
+							</div>
+							<!--end of col-->
+						</div>
+					</form>
+				</div>
+				<!--end of col-->
+			</div>
+		</div>
+    </div>
+</body>
+</html>
